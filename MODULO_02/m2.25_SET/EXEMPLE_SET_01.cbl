@@ -35,10 +35,10 @@
       *      DISPLAY 'VALOR FINAL DE WS-NUM-1 : ' WS-NUM-1
       *      DISPLAY 'VALOR FINAL DE WS-NUM-2 : ' WS-NUM-2
 
-            DISPLAY 'SITUACAO DO PAGAMENTO ATAL: ' WS-PAGTO
-            SET WS-CONFIRM                         TO TRUE
-            DISPLAY 'NOVA SITUACAO DO PAGAMETO: '  WS-PAGTO
-            SET WS-CONFIRM                         TO FALSE
+            DISPLAY 'SITUACAO DO PAGAMENTO ATAL: '  WS-PAGTO
+            SET WS-CONFIRM                          TO TRUE
+            DISPLAY 'NOVA SITUACAO DO PAGAMETO:  '  WS-PAGTO
+            SET WS-CONFIRM                          TO FALSE
             DISPLAY 'NOVA SITUACAO DO CORRIGIDO: '  WS-PAGTO
 
             STOP RUN.
