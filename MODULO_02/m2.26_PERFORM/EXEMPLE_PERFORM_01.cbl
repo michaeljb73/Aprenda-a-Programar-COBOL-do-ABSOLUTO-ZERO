@@ -1,5 +1,5 @@
       ******************************************************************
-      * Author: Michael J. Bezerra - Cobol do Zero
+      * Author: Michael J. Bezerra - Cobol do Zero ao Avançado
       * Date:
       * Purpose: Treinamento curso COBOL
       * Tectonics: cobc
