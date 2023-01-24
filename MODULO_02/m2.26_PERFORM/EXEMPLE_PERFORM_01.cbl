@@ -1,7 +1,7 @@
       ******************************************************************
       * Author: Aprenda a Programar COBOL do ABSOLUTO ZERO!
       * Date: 23/01/2023.
-      * Purpose: Treinamento curso COBOL de Michael J. Bezerra .
+      * Purpose: Ensinar COBOL à Michael J. Bezerra .
       * Tectonics: cobc.
       ******************************************************************
        IDENTIFICATION DIVISION.

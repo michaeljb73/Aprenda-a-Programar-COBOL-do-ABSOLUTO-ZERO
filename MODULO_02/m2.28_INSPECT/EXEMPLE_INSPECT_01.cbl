@@ -1,15 +1,11 @@
       ******************************************************************
       * Author: Aprenda a Programar COBOL do ABSOLUTO ZERO!
-      * Date: 22/01/2021
-      * Purpose: Exemplo de uso de código COBOL
+      * Date: 24/01/2023
+      * Purpose: Ensinar COBOL à Michael J. Bezerra
       * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. sec5_m2_19.
-       ENVIRONMENT DIVISION.
-       CONFIGURATION SECTION.
-       SPECIAL-NAMES.
-           DECIMAL-POINT IS COMMA.
+       PROGRAM-ID. EXEMPLE_INSPECT_01.
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
@@ -34,44 +30,9 @@
            88 WS-MES-30                        VALUE 1 THRU 30.
            88 WS-MES-31                        VALUE 1 THRU 31.
 
-      * CRIAR ITEM DE GRUPO WS-MESES-ANO - SLIDES PAG 26 ( CAP5 07 DE 14 )
        PROCEDURE DIVISION.
-      ***************************************************************
-      *     INICIALIZA AS VARIAVEIS E CHAMA OS DEMAIS PARAGRAFOS
-      ***************************************************************
        P100-INICIAL.
             DISPLAY "INICIO DO PROCESSAMENTO".
-            MOVE 3 TO WS-MESES-ANO.
-
-            IF WS-MES-ATUAL THEN
-                DISPLAY "MES VERDADEIRO: " WS-MESES-ANO
-            ELSE
-                DISPLAY "ESSE MÊS NÃO EXITE: " WS-MESES-ANO
-            END-IF.
-
-            MOVE 31 TO WS-DIAS-MES.
-
-            EVALUATE WS-DIAS-MES
-               WHEN 1 THRU 28
-                   DISPLAY WS-DIAS-MES
-               WHEN 1 THRU 29
-                   DISPLAY WS-DIAS-MES
-               WHEN 1 THRU 30
-                   DISPLAY WS-DIAS-MES
-               WHEN 1 THRU 31
-                   DISPLAY WS-DIAS-MES
-               WHEN OTHER
-                   DISPLAY "O DIA DO MES NAO EXISTE " WS-DIAS-MES
-            END-EVALUATE.
-
-      *      STOP RUN.
-
-            MOVE SPACES TO  WS-DATA
-                            WS-NOME-MES-AUX
-                            WS-TECLA-AUX.
-
-      *     DISPLAY "INFORME UMA DATA: ".
-      *     ACCEPT WS-DATA.
 
             MOVE '12'      TO WS-DATA(01:02).
             MOVE '/'       TO WS-DATA(03:01).
@@ -81,9 +42,23 @@
 
             DISPLAY WS-DATA.
 
-      *      PERFORM P200-VER-MES       THRU P200-VER-MES-FIM.
-      *      PERFORM P300-MOSTRA        THRU P300-MOSTRA-FIM.
-      *      PERFORM P900-TERMINAL      THRU P900-TERMINAL-FIM.
+      ***************************************************************
+      * COMANDO INSPECT PARA VERIFICAR TOTAL DE CARACTERES
+      * QUE SE DESEJA CONTAR.
+      ***************************************************************
+
+      *      INSPECT WS-DATA TALLYING WS-TOTAL FOR ALL '/'
+      *      BEFORE INITIAL '21'.
+
+      *      DISPLAY "CONTEGEM TOTAL DO CARACTER '/': " WS-TOTAL.
+
+      ***************************************************************
+      * COMANDO INSPECT NA SUBSTITUIÇÃO DE CARACTERES.
+      ***************************************************************
+
+            INSPECT WS-DATA REPLACING ALL "/" BY "-" AFTER "12".
+
+            DISPLAY WS-DATA.
 
        P100-INICIAL-FIM.
-       END PROGRAM sec5_m2_19.
+       END PROGRAM EXEMPLE_INSPECT_01.
