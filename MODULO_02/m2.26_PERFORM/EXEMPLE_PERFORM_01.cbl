@@ -1,8 +1,8 @@
       ******************************************************************
-      * Author: Michael J. Bezerra - Cobol do Zero ao Avançado
-      * Date:
-      * Purpose: Treinamento curso COBOL
-      * Tectonics: cobc
+      * Author: Aprenda a Programar COBOL do ABSOLUTO ZERO!
+      * Date: 23/01/2023.
+      * Purpose: Treinamento curso COBOL de Michael J. Bezerra .
+      * Tectonics: cobc.
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. EXEMPLE_PERFORM_01.
