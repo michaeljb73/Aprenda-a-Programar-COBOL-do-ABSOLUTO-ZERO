@@ -1,7 +1,7 @@
       ******************************************************************
-      * Author:
-      * Date:
-      * Purpose:
+      * Author: Aprenda a Programar COBOL do ABSOLUTO ZERO!
+      * Date: 30/01/2023
+      * Purpose: Aprender COBOL - Michael J. Bezerra
       * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
@@ -9,8 +9,35 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
+
+       01  WS-NOME.
+           03 WS-FIRSTNAME    PIC X(15)  VALUE 'ANDRE'.
+           03 FILLER          PIC X(15)  VALUE 'COSTA'.
+           03 WS-ID           PIC 9(003) VALUE ZEROES.
+      *    03 WS-LASTNAME     PIC X(15)  VALUE 'COSTA'.
+
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-            DISPLAY "Hello world"
+
+            DISPLAY 'SAIDA 1: '
+            DISPLAY WS-NOME.
+
+      *     RESETAR VARIAVEIS. OBS.: O FILLER SERÁ CONSERVDO.
+
+            INITIALISE WS-NOME REPLACING   ALPHANUMERIC  BY 'NOME'
+                                           NUMERIC       BY 1
+
+            DISPLAY 'SAIDA 2: '
+            DISPLAY WS-NOME.
+
+            DISPLAY 'SAIDA 3: '
+            INITIALISE WS-NOME
+            DISPLAY WS-NOME.
+
+            DISPLAY 'SAIDA 4: '
+            INITIALISE WS-NOME REPLACING   ALPHANUMERIC  BY SPACES
+                                           NUMERIC       BY ZEROES
+            DISPLAY WS-NOME.
+
             STOP RUN.
        END PROGRAM EX_INITIALIZE_01.
