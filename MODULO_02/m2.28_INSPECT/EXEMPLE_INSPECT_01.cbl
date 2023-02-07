@@ -53,7 +53,7 @@
       *      DISPLAY "CONTEGEM TOTAL DO CARACTER '/': " WS-TOTAL.
 
       ***************************************************************
-      * COMANDO INSPECT NA SUBSTITUIÇÃO DE CARACTERES.
+      * COMANDO INSPECT NA SUBSTITUINDO DE CARACTERES.
       ***************************************************************
 
             INSPECT WS-DATA REPLACING ALL "/" BY "-" AFTER "12".

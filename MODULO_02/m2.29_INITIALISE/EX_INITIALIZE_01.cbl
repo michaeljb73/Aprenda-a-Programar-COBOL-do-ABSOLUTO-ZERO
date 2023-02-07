@@ -13,7 +13,7 @@
        01  WS-NOME.
            03 WS-FIRSTNAME    PIC X(15)  VALUE 'ANDRE'.
            03 FILLER          PIC X(15)  VALUE 'COSTA'.
-           03 WS-ID           PIC 9(003) VALUE ZEROES.
+           03 WS-ID           PIC 9(003) VALUE  ZEROES.
       *    03 WS-LASTNAME     PIC X(15)  VALUE 'COSTA'.
 
        PROCEDURE DIVISION.
@@ -24,18 +24,18 @@
 
       *     RESETAR VARIAVEIS. OBS.: O FILLER SERÁ CONSERVDO.
 
-            INITIALISE WS-NOME REPLACING   ALPHANUMERIC  BY 'NOME'
+            INITIALIZE WS-NOME REPLACING   ALPHANUMERIC  BY 'NOME'
                                            NUMERIC       BY 1
 
             DISPLAY 'SAIDA 2: '
             DISPLAY WS-NOME.
 
             DISPLAY 'SAIDA 3: '
-            INITIALISE WS-NOME
+            INITIALIZE WS-NOME
             DISPLAY WS-NOME.
 
             DISPLAY 'SAIDA 4: '
-            INITIALISE WS-NOME REPLACING   ALPHANUMERIC  BY SPACES
+            INITIALIZE WS-NOME REPLACING   ALPHANUMERIC  BY SPACES
                                            NUMERIC       BY ZEROES
             DISPLAY WS-NOME.
 

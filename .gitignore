@@ -1,5 +1,8 @@
 # Ignorar pastas bin
 /MODULO*/*/bin/
 
+# Ignorar pastas .vscode
+/MODULO*/*/.vscode
+
 #Ignora arquivos .exe
 *.exe
