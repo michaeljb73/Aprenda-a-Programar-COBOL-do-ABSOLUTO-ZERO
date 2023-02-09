@@ -17,7 +17,7 @@
        MAIN-PROCEDURE.
 
       ********************* FORMA 1 ************************************
-            INITIALISE WS-CONTEUDO
+            INITIALIZE WS-CONTEUDO
                        WS-TEXTO
 
             STRING
@@ -30,7 +30,7 @@
             DISPLAY WS-CONTEUDO
 
       ********************* FORMA 2 ************************************
-            INITIALISE WS-CONTEUDO
+            INITIALIZE WS-CONTEUDO
                        WS-TEXTO
 
             MOVE 'O ANDRE COSTA ESTA MINISTRANDO CURSO' TO WS-TEXTO
@@ -44,17 +44,17 @@
             DISPLAY WS-CONTEUDO
 
       ************** FORMA 3 - TRABALHANDO COM DELIMITADOR ***********
-            INITIALISE WS-CONTEUDO
+            INITIALIZE WS-CONTEUDO
                        WS-TEXTO
 
-      *     ############## DELIMITADO POR ESPAÇOS ##############
+      *     ############## DELIMITADO POR ESPAï¿½OS ##############
       *      MOVE 'O ANDRE COSTA ESTA MINISTRANDO CURSO' TO WS-TEXTO
       *      STRING
       *         WS-TEXTO
       *         DELIMITED BY SPACES INTO WS-CONTEUDO
       *      END-STRING
 
-      *     ############ DELIMITADO POR PONTO E VÍRGULA ############
+      *     ############ DELIMITADO POR PONTO E Vï¿½RGULA ############
       *      MOVE 'O;ANDRE;COSTA;ESTA;MINISTRANDO;CURSO' TO WS-TEXTO
       *      STRING
       *         WS-TEXTO
@@ -71,7 +71,7 @@
             DISPLAY WS-CONTEUDO
 
       ************** FORMA 4 - TRABALHANDO COM PONTEIRO ***********
-            INITIALISE WS-CONTEUDO
+            INITIALIZE WS-CONTEUDO
                        WS-TEXTO
 
             MOVE 'O             ESTA MINISTRANDO CURSO' TO WS-TEXTO
