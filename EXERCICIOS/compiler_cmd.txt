@@ -1,0 +1,2 @@
+# Compiler cmd line
+cobc.exe -x -o [caminho_de_saída]\[nome_arquivo_saida].exe -std=ibm -Wall -debug .\[caminho_de_entrada]\[nome_arquivo_entrada].cbl
